@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ElementCell" id="1cN-Bq-o10" customClass="ElementCell" customModule="StreetLab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="saH-mh-9jI">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-NU-PRO">
+                        <rect key="frame" x="8" y="80" width="64" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="Myi-aI-ZdH"/>
+                            <constraint firstAttribute="height" constant="20" id="ZBH-v2-VqM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RcH-e3-pWZ">
+                        <rect key="frame" x="8" y="5" width="64" height="72"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="72" id="CvN-FI-Ut8"/>
+                            <constraint firstAttribute="width" constant="64" id="DTQ-dt-21l"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.77254903320000001" green="0.84705877299999999" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="RcH-e3-pWZ" firstAttribute="leading" secondItem="saH-mh-9jI" secondAttribute="leading" constant="8" id="9nq-9l-A86"/>
+                    <constraint firstAttribute="bottom" secondItem="HNn-NU-PRO" secondAttribute="bottom" id="Fxz-9F-d6D"/>
+                    <constraint firstItem="RcH-e3-pWZ" firstAttribute="top" secondItem="saH-mh-9jI" secondAttribute="top" constant="5" id="GP0-W3-pJf"/>
+                    <constraint firstAttribute="trailing" secondItem="HNn-NU-PRO" secondAttribute="trailing" constant="8" id="H36-eg-7aE"/>
+                    <constraint firstAttribute="trailing" secondItem="RcH-e3-pWZ" secondAttribute="trailing" constant="8" id="Ls0-mn-94e"/>
+                    <constraint firstItem="HNn-NU-PRO" firstAttribute="top" secondItem="RcH-e3-pWZ" secondAttribute="bottom" constant="3" id="Muy-8R-EnH"/>
+                    <constraint firstItem="HNn-NU-PRO" firstAttribute="leading" secondItem="saH-mh-9jI" secondAttribute="leading" constant="8" id="RpJ-uc-t47"/>
+                    <constraint firstItem="HNn-NU-PRO" firstAttribute="top" secondItem="RcH-e3-pWZ" secondAttribute="bottom" constant="3" id="mSF-dL-1VI"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="104" height="105"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="HNn-NU-PRO" id="Th3-Ti-2jk"/>
+                <outlet property="imageView" destination="RcH-e3-pWZ" id="VwA-ja-AXR"/>
+            </connections>
+            <point key="canvasLocation" x="249.23076923076923" y="-88.151658767772503"/>
+        </collectionViewCell>
+    </objects>
+</document>

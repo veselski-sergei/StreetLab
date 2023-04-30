@@ -13,7 +13,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    // MARK: - Actions
+    
+    
+    @IBAction func didTapDemoButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "DesignConstructorVC", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DesignConstructorVC") as! DesignConstructorVC
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }
 
