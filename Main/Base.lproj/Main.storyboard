@@ -30,12 +30,22 @@
                                     <action selector="didTapDemoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2s-Ds-VGp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrf-pb-6rm">
+                                <rect key="frame" x="114" y="657" width="161" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Demo designs list"/>
+                                <connections>
+                                    <action selector="didTapDesignsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZj-UO-SiL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MrA-1G-aPn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="24C-eT-otI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Axc-Mq-Uyi" secondAttribute="bottom" constant="52" id="5XA-sY-0Ab"/>
+                            <constraint firstItem="lrf-pb-6rm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ifl-3V-oge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lrf-pb-6rm" secondAttribute="bottom" constant="118" id="Ig1-Zk-D9f"/>
                             <constraint firstItem="MrA-1G-aPn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J2M-aR-Ko3"/>
                             <constraint firstItem="Axc-Mq-Uyi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uka-6T-AXO"/>
                         </constraints>

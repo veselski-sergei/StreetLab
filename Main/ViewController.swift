@@ -24,5 +24,11 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func didTapDesignsButton(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "StreetDesignsVC", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StreetDesignsVC") as! StreetDesignsVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
