@@ -16,10 +16,12 @@ class StreetDesignsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        streetDesigns.append(StreetDesignModel(name: "Nevsky av.", image: "someImage", timestamp: "Today"))
-        streetDesigns.append(StreetDesignModel(name: "Belgradskaya st.", image: "someImage", timestamp: "Yesterday"))
-        streetDesigns.append(StreetDesignModel(name: "Turku st.", image: "someImage", timestamp: "Some time ago"))
-        streetDesigns.append(StreetDesignModel(name: "Blagodatnaya st.", image: "someImage", timestamp: "Today"))
+        streetDesigns.append(StreetDesignModel(name: "Nevsky av.", image: "bus", timestamp: "Today"))
+        streetDesigns.append(StreetDesignModel(name: "Belgradskaya st.", image: "car", timestamp: "Yesterday"))
+        streetDesigns.append(StreetDesignModel(name: "Turku st.", image: "scooter", timestamp: "Some time ago"))
+        streetDesigns.append(StreetDesignModel(name: "Blagodatnaya st.", image: "bicycle", timestamp: "Today"))
+        
+        tableView.rowHeight = 100
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,14 +41,25 @@ extension StreetDesignsVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: StreetDesignCell.cellIdentifier, for: indexPath) as! StreetDesignCell
         
         let model = streetDesigns[indexPath.row]
-        
         cell.configure(with: model)
-        
-//        cell.textLabel?.text = "cwcwc"
-//        cell.imageView?.image = #imageLiteral(resourceName: "gribi.jpeg")
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "DesignConstructorVC", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DesignConstructorVC") as! DesignConstructorVC
+        
+        let streetModel = streetDesigns[indexPath.row]
+        vc.street = streetModel
+//        vc.streetImageView.image = UIImage(systemName: model.image)
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
     
 }

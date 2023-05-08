@@ -15,27 +15,39 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU9-I4-1wF">
-                        <rect key="frame" x="49" y="11" width="42" height="21"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-8g-zIL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="79"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU9-I4-1wF">
+                        <rect key="frame" x="174" y="0.0" width="42" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEU-Jc-5jA">
-                        <rect key="frame" x="271" y="11" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEU-Jc-5jA">
+                        <rect key="frame" x="174" y="79" width="42" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="GEU-Jc-5jA" secondAttribute="bottom" id="68W-By-SbI"/>
+                    <constraint firstItem="vU9-I4-1wF" firstAttribute="top" secondItem="Kyl-Fs-7Pu" secondAttribute="top" id="Wu0-MP-maF"/>
+                    <constraint firstItem="vU9-I4-1wF" firstAttribute="centerX" secondItem="Kyl-Fs-7Pu" secondAttribute="centerX" id="dCj-ov-ky6"/>
+                    <constraint firstItem="GEU-Jc-5jA" firstAttribute="centerX" secondItem="Kyl-Fs-7Pu" secondAttribute="centerX" id="uPO-1U-DRX"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="leftLabel" destination="vU9-I4-1wF" id="w1Z-Xa-fvd"/>
-                <outlet property="rightLabel" destination="GEU-Jc-5jA" id="vmh-D9-d82"/>
+                <outlet property="nameLabel" destination="vU9-I4-1wF" id="w1Z-Xa-fvd"/>
+                <outlet property="previewImage" destination="Sfb-8g-zIL" id="wWw-Ch-BBS"/>
+                <outlet property="timestampLabel" destination="GEU-Jc-5jA" id="vmh-D9-d82"/>
             </connections>
-            <point key="canvasLocation" x="33.846153846153847" y="-28.199053036658118"/>
+            <point key="canvasLocation" x="33.846153846153847" y="-28.436018957345969"/>
         </tableViewCell>
     </objects>
 </document>

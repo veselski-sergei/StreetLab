@@ -15,15 +15,17 @@ protocol CustomCell {
 
 class StreetDesignCell: UITableViewCell, CustomCell {
 
-    @IBOutlet weak var leftLabel: UILabel!
-    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var previewImage: UIImageView!
     
     func configure(with design: StreetDesignModel) {
-        leftLabel.text = design.name
-        rightLabel.text = design.timestamp
+        nameLabel.text = design.name
+        timestampLabel.text = design.timestamp
+        previewImage.image = UIImage(systemName: design.image)
         
-        leftLabel.sizeToFit()
-        rightLabel.sizeToFit()
+//        nameLabel.sizeToFit()
+//        timestampLabel.sizeToFit()
     }
 }
 
