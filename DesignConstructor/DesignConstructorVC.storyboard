@@ -47,26 +47,25 @@
                                 <rect key="frame" x="248" y="88" width="349" height="132"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-ry-3g5">
-                                <rect key="frame" x="401" y="47" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите название улицы" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-o6-P6I">
+                                <rect key="frame" x="323.66666666666669" y="46" width="196.66666666666669" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.85882353779999998" green="0.85882353779999998" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="jfD-o6-P6I" firstAttribute="top" secondItem="uh1-a6-w72" secondAttribute="bottom" constant="7" id="07G-Kj-lrh"/>
                             <constraint firstItem="z9B-yl-4E0" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="7kn-yU-tVK"/>
+                            <constraint firstItem="jfD-o6-P6I" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="HuT-D4-Q6S"/>
                             <constraint firstItem="Ylg-XK-epJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="248" id="KAt-dK-dzp"/>
-                            <constraint firstItem="ltb-ry-3g5" firstAttribute="top" secondItem="uh1-a6-w72" secondAttribute="bottom" constant="8" symbolic="YES" id="KHJ-PP-RJ5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ylg-XK-epJ" secondAttribute="trailing" constant="247" id="W8p-j1-1qe"/>
                             <constraint firstItem="z9B-yl-4E0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="YcY-I7-tkq"/>
                             <constraint firstItem="Ylg-XK-epJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="41" id="Zte-Sw-jKG"/>
                             <constraint firstItem="z9B-yl-4E0" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="44" id="gGh-xP-Hca"/>
                             <constraint firstItem="4yI-oX-Q8u" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="kxU-FH-YWX"/>
                             <constraint firstItem="4yI-oX-Q8u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="42" id="lXs-Dt-tN7"/>
-                            <constraint firstItem="ltb-ry-3g5" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="mKb-WH-iHg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4yI-oX-Q8u" secondAttribute="bottom" id="nGt-Jz-tbl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="uh1-a6-w72" secondAttribute="top" constant="38" id="rFH-ls-swX"/>
                             <constraint firstItem="uh1-a6-w72" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="s7T-po-Q1v"/>
@@ -77,7 +76,7 @@
                         <outlet property="backgroundView" destination="z9B-yl-4E0" id="md0-YN-RLk"/>
                         <outlet property="streetElemsCollectionView" destination="4yI-oX-Q8u" id="APq-Ob-TdR"/>
                         <outlet property="streetImageView" destination="Ylg-XK-epJ" id="S3O-ZY-OsF"/>
-                        <outlet property="streetName" destination="ltb-ry-3g5" id="ZLC-D2-Gyf"/>
+                        <outlet property="streetName" destination="jfD-o6-P6I" id="tr6-0x-Uyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

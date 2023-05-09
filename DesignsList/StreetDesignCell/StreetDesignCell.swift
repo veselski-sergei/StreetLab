@@ -23,9 +23,13 @@ class StreetDesignCell: UITableViewCell, CustomCell {
         nameLabel.text = design.name
         timestampLabel.text = design.timestamp
         previewImage.image = UIImage(systemName: design.image)
-        
-//        nameLabel.sizeToFit()
-//        timestampLabel.sizeToFit()
+    }
+    
+    // MARK: - View Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentView.layer.cornerRadius = 30
     }
 }
 

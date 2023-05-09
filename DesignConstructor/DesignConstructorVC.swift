@@ -13,11 +13,11 @@ class DesignConstructorVC: UIViewController {
     
     @IBOutlet weak var streetElemsCollectionView: UICollectionView!
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var streetName: UILabel!
+    @IBOutlet weak var streetName: UITextField!
     @IBOutlet weak var streetImageView: UIImageView!
     
-    // MARK: - Additional variables
-    var street: StreetDesignModel!
+    // MARK: - Variables
+    var street: StreetDesignModel?
     
     // MARK: - Image source
     let imageNamesArray: [String] = ["bus",
@@ -33,8 +33,12 @@ class DesignConstructorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        streetName.text = street.name
-        streetImageView.image = UIImage(systemName: street.image)
+        if let street = street {
+            streetName.text = street.name
+            streetImageView.image = UIImage(systemName: street.image)
+        }
+        
+        
         
         backgroundView.layer.cornerRadius = 6
         streetElemsCollectionView.dataSource = self

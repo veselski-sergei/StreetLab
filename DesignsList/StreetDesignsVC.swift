@@ -16,17 +16,37 @@ class StreetDesignsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // !!! datasource - core data
+        tableView.dataSource = self
+        
         streetDesigns.append(StreetDesignModel(name: "Nevsky av.", image: "bus", timestamp: "Today"))
         streetDesigns.append(StreetDesignModel(name: "Belgradskaya st.", image: "car", timestamp: "Yesterday"))
         streetDesigns.append(StreetDesignModel(name: "Turku st.", image: "scooter", timestamp: "Some time ago"))
+        streetDesigns.append(StreetDesignModel(name: "Blagodatnaya st.", image: "bicycle", timestamp: "Today"))
+        streetDesigns.append(StreetDesignModel(name: "Turku st.", image: "scooter", timestamp: "Some time ago"))
+        streetDesigns.append(StreetDesignModel(name: "Blagodatnaya st.", image: "bicycle", timestamp: "Today"))
+        streetDesigns.append(StreetDesignModel(name: "Turku st.", image: "scooter", timestamp: "Some time ago"))
+        streetDesigns.append(StreetDesignModel(name: "Blagodatnaya st.", image: "bicycle", timestamp: "Today"))
+        streetDesigns.append(StreetDesignModel(name: "Nevsky av.", image: "bus", timestamp: "Today"))
         streetDesigns.append(StreetDesignModel(name: "Blagodatnaya st.", image: "bicycle", timestamp: "Today"))
         
         tableView.rowHeight = 100
 
         tableView.delegate = self
-        tableView.dataSource = self
+        
+        
         
         tableView.registerCustomCell(StreetDesignCell.self)
+    }
+    
+    
+    @IBAction func newDesignButton(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "DesignConstructorVC", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DesignConstructorVC") as! DesignConstructorVC
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
 
@@ -55,11 +75,9 @@ extension StreetDesignsVC: UITableViewDelegate, UITableViewDataSource {
         
         let streetModel = streetDesigns[indexPath.row]
         vc.street = streetModel
-//        vc.streetImageView.image = UIImage(systemName: model.image)
         
         navigationController?.pushViewController(vc, animated: true)
-        
-        
     }
+    
     
 }
