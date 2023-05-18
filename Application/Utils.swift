@@ -15,5 +15,5 @@ class AppUtility {
             delegate.orientationLock = orientation
         }
     }
-
+    
 }

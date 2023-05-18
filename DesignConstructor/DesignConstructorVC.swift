@@ -47,15 +47,15 @@ class DesignConstructorVC: UIViewController {
     }
     
     // MARK: - Orientation
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        AppUtility.lockOrientation(.landscape)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        AppUtility.lockOrientation(.portrait)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        AppUtility.lockOrientation(.landscape)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        AppUtility.lockOrientation(.portrait)
+//    }
 }
 
 extension DesignConstructorVC: UICollectionViewDataSource {
